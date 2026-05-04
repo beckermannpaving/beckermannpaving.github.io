@@ -1,75 +1,395 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Beckermann Paving | Jefferson County MO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
-        header { background: #1f2937; color: white; padding: 60px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 40px; }
-        header p { font-size: 18px; }
-        .btn { background: #f59e0b; color: white; padding: 12px 25px; text-decoration: none; display: inline-block; margin-top: 15px; border-radius: 5px; }
-        section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: #f4f4f4; padding: 20px; border-radius: 8px; }
-        footer { background: #111; color: white; text-align: center; padding: 20px; }
-    </style>
+  <title>Beckermann Paving | Asphalt Paving, Driveways & Parking Lots in Missouri</title>
+  <meta name="description" content="Beckermann Paving provides asphalt paving, driveway paving, parking lot paving, pothole repair, patching, and sealcoating in Jefferson County, Washington County, Franklin County, St. Francois County, and surrounding Missouri areas.">
+  <meta name="keywords" content="asphalt paving Missouri, paving company Jefferson County MO, driveway paving, parking lot paving, asphalt repair, pothole repair, sealcoating, Beckermann Paving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --orange: #CA651C;
+      --dark: #171717;
+      --gray: #f4f4f4;
+      --text: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: var(--dark);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .topbar a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    header {
+      background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 95px 20px;
+    }
+
+    header img {
+      max-width: 230px;
+      background: white;
+      padding: 14px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin: 10px 0;
+      line-height: 1.1;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      font-size: 22px;
+    }
+
+    .btn {
+      background: var(--orange);
+      color: white;
+      padding: 15px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      margin: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #a84f13;
+    }
+
+    section {
+      padding: 65px 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 14px;
+      color: var(--dark);
+    }
+
+    .accent {
+      color: var(--orange);
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto 35px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .services, .why, .areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card div {
+      padding: 24px;
+      border-top: 5px solid var(--orange);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--dark);
+    }
+
+    .dark-section {
+      background: var(--dark);
+      color: white;
+      max-width: none;
+    }
+
+    .dark-section .inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .dark-section h2 {
+      color: white;
+    }
+
+    .why div, .areas div {
+      background: rgba(255,255,255,.08);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .quote-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    form {
+      background: var(--gray);
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .contact-box {
+      background: var(--dark);
+      color: white;
+      padding: 30px;
+      border-radius: 14px;
+    }
+
+    .contact-box a {
+      color: white;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 390px;
+      border: 0;
+      border-radius: 14px;
+    }
+
+    .facebook {
+      text-align: center;
+      background: var(--gray);
+      border-radius: 14px;
+      padding: 35px;
+    }
+
+    footer {
+      background: #0d0d0d;
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+
+    @media (max-width: 800px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      .quote-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header style="text-align:center;">
-    <img src="logo.png" alt="Beckermann Paving Logo" style="max-width:220px;">
-    <p>Proudly Serving Jefferson County and Surrounding Areas</p>
-    <a href="tel:314-349-5052" class="btn">Call for Free Estimate</a>
+<div class="topbar">
+  Call Beckermann Paving today for a free estimate: <a href="tel:314-349-5052">314-349-5052</a>
+</div>
+
+<header>
+  <img src="logo.png" alt="Beckermann Paving Logo">
+  <h1>Asphalt Paving Built to Last</h1>
+  <p>Driveway paving, parking lots, asphalt repairs, patching, and sealcoating for homes, businesses, HOAs, and private roads across Missouri.</p>
+  <a href="tel:YOURNUMBER" class="btn">Call for Free Estimate</a>
+  <a href="#quote" class="btn">Request a Quote</a>
 </header>
 
 <section>
-    <h2>About Us</h2>
-    <p>Beckermann Paving provides reliable, high-quality asphalt paving services for residential, commercial, and HOA clients. We focus on durability, clean work, and honest pricing.</p>
-</section>
+  <h2>Missouri Asphalt Paving Services</h2>
+  <p class="intro">
+    Beckermann Paving provides dependable asphalt paving solutions for residential and commercial properties. Whether you need a new driveway, parking lot repairs, pothole patching, or sealcoating, our team focuses on quality workmanship, honest communication, and results that hold up.
+  </p>
 
-<section>
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Driveways</h3>
-            <p>New installs and replacements built to last.</p>
-        </div>
-        <div class="card">
-            <h3>Parking Lots</h3>
-            <p>Professional paving for businesses and HOAs.</p>
-        </div>
-        <div class="card">
-            <h3>Repairs & Patching</h3>
-            <p>Fix cracks, potholes, and worn surfaces.</p>
-        </div>
-        <div class="card">
-            <h3>Sealcoating</h3>
-            <p>Protect and extend the life of your asphalt.</p>
-        </div>
+  <div class="services">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?auto=format&fit=crop&w=900&q=80" alt="Residential driveway paving">
+      <div>
+        <h3>Driveway Paving</h3>
+        <p>New asphalt driveways, driveway resurfacing, and replacement paving designed to improve curb appeal and durability.</p>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Commercial parking lot paving">
+      <div>
+        <h3>Parking Lots</h3>
+        <p>Commercial asphalt paving for businesses, churches, property managers, HOAs, and private community roads.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1597766353939-637ff86f19aa?auto=format&fit=crop&w=900&q=80" alt="Asphalt repair and patching">
+      <div>
+        <h3>Repairs & Patching</h3>
+        <p>Pothole repair, asphalt patching, damaged surface repair, and pavement improvements to help extend the life of your asphalt.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Sealcoating and asphalt protection">
+      <div>
+        <h3>Sealcoating</h3>
+        <p>Protect your asphalt from weather, wear, water damage, and aging while giving your pavement a clean, finished look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="inner">
+    <h2>Why Choose <span class="accent">Beckermann Paving?</span></h2>
+
+    <div class="why">
+      <div>
+        <h3>Locally Owned</h3>
+        <p>Serving Missouri communities with reliable paving services and personal attention.</p>
+      </div>
+
+      <div>
+        <h3>Free Estimates</h3>
+        <p>Get clear communication and upfront information before your paving project begins.</p>
+      </div>
+
+      <div>
+        <h3>Residential & Commercial</h3>
+        <p>From home driveways to business parking lots and HOA roads, we handle projects of all sizes.</p>
+      </div>
+
+      <div>
+        <h3>Quality Workmanship</h3>
+        <p>We focus on clean work, durable results, and asphalt paving that is built to last.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-    <h2>Why Choose Us</h2>
-    <ul>
-        <li>Locally owned and operated</li>
-        <li>Fast, reliable service</li>
-        <li>Honest pricing with free estimates</li>
-        <li>Experienced crew and quality materials</li>
-    </ul>
+  <h2>Service Areas</h2>
+  <p class="intro">
+    Beckermann Paving proudly serves homeowners, businesses, HOAs, property managers, churches, and local organizations throughout Eastern and Southeast Missouri.
+  </p>
+
+  <div class="areas">
+    <div><h3>Jefferson County</h3><p>Including Cedar Hill, Hillsboro, Festus, De Soto, Arnold, High Ridge, and surrounding areas.</p></div>
+    <div><h3>Washington County</h3><p>Serving residential, rural, and commercial paving needs throughout the county.</p></div>
+    <div><h3>Franklin County</h3><p>Driveways, parking lots, asphalt repairs, and paving projects for local properties.</p></div>
+    <div><h3>St. Francois County</h3><p>Dependable asphalt paving and repair services for homes, businesses, and communities.</p></div>
+  </div>
+</section>
+
+<section id="quote">
+  <h2>Request a Free Quote</h2>
+  <p class="intro">
+    Tell us a little about your paving project and Beckermann Paving will follow up with you.
+  </p>
+
+  <div class="quote-wrap">
+    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address">
+      <input type="text" name="address" placeholder="Project Address or City">
+
+      <select name="service">
+        <option value="">What service do you need?</option>
+        <option>Driveway Paving</option>
+        <option>Parking Lot Paving</option>
+        <option>Asphalt Repair / Patching</option>
+        <option>Sealcoating</option>
+        <option>Private Road / HOA Project</option>
+        <option>Other</option>
+      </select>
+
+      <textarea name="message" placeholder="Tell us about your project"></textarea>
+
+      <button class="btn" type="submit">Submit Quote Request</button>
+    </form>
+
+    <div class="contact-box">
+      <h3>Prefer to Call?</h3>
+      <p><strong>Phone:</strong> <a href="tel:314-349-5052">314-349-5052</a></p>
+      <p><strong>Email:</strong> <a href="mailto:beckermannpaving@gmail.com">beckermannpaving@gmail.com</a></p>
+      <p><strong>Services:</strong> Asphalt paving, driveway paving, parking lots, pothole repair, patching, sealcoating, and private road paving.</p>
+      <p><strong>Service Area:</strong> Jefferson County, Washington County, Franklin County, St. Francois County, and nearby Missouri communities.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <p><strong>Phone:</strong> 314-349-5052</p>
-    <p><strong>Email:</strong> beckermannpaving@gmail.com</p>
-    <p><strong>Service Area:</strong> Jefferson County, Washington County, Franklin County, and surrounding areas</p>
+  <h2>Find Us Near Jefferson County, Missouri</h2>
+  <iframe
+    src="https://www.google.com/maps?q=Jefferson%20County%20Missouri&output=embed"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+
+<section>
+  <div class="facebook">
+    <h2>Follow Beckermann Paving on Facebook</h2>
+    <p>See updates, recent projects, photos, and more from Beckermann Paving.</p>
+    <a class="btn" href="https://www.facebook.com/profile.php?id=61588468852577" target="_blank">Visit Facebook Page</a>
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 Beckermann Paving</p>
+  <p>© 2026 Beckermann Paving. Asphalt Paving, Driveways, Parking Lots, Repairs & Sealcoating in Missouri.</p>
 </footer>
 
 </body>
